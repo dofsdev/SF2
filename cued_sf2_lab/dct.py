@@ -101,3 +101,4 @@ def regroup(X, N):
     X = X.reshape(m // N_m, N_m, n // N_n, N_n)  # subdivide the axes
     X = X.transpose((1, 0, 3, 2))                # permute them
     return X.reshape(m, n)                       # and recombine
+
