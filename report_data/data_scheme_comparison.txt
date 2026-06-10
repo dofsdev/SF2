@@ -1,0 +1,22 @@
+% Table: Full scheme comparison (4 schemes × 10 images)
+\setlength{\tabcolsep}{3.8pt}
+\begin{tabular}{@{}l rrc rrc rrc rrc@{}}
+\toprule
+ & \multicolumn{3}{c}{LBT $N=4$, $s=\!\sqrt{2}$} & \multicolumn{3}{c}{DCT $N=8$ uniform} & \multicolumn{3}{c}{DWT 4-level} & \multicolumn{3}{c}{DCT JPEG-luma} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}
+Image & bits & RMS & & bits & RMS & & bits & RMS & & bits & RMS & \\
+\midrule
+Lighthouse & 40,757 & 9.4 & \checkmark & 40,798 & 8.6 & \checkmark & 40,707 & 11.2 & \checkmark & 40,763 & 10.6 & \checkmark \\
+Bridge & 40,725 & 13.3 & \checkmark & 40,550 & 12.9 & \checkmark & 40,553 & 16.9 & \checkmark & 40,828 & 13.7 & \checkmark \\
+Flamingo & 40,650 & 12.8 & \checkmark & 40,564 & 12.2 & \checkmark & 40,539 & 15.6 & \checkmark & 40,558 & 13.8 & \checkmark \\
+2019 & 40,909 & 11.7 & \checkmark & 41,002 & 11.4 & $\times$ & 40,768 & 14.7 & \checkmark & 40,634 & 12.4 & \checkmark \\
+2020 & 40,729 & 20.9 & \checkmark & 40,786 & 20.5 & \checkmark & 40,498 & 27.0 & \checkmark & 40,313 & 22.1 & \checkmark \\
+2021 & 41,002 & 9.3 & $\times$ & 40,734 & 9.1 & \checkmark & 41,115 & 11.4 & $\times$ & 40,660 & 10.7 & \checkmark \\
+2022 & 40,620 & 12.4 & \checkmark & 40,902 & 10.3 & \checkmark & 41,050 & 12.4 & $\times$ & 40,463 & 12.7 & \checkmark \\
+2023 & 40,785 & 14.3 & \checkmark & 41,029 & 13.7 & $\times$ & 41,051 & 17.7 & $\times$ & 40,883 & 15.5 & \checkmark \\
+2024 & 40,500 & 8.0 & \checkmark & 40,759 & 6.8 & \checkmark & 40,893 & 8.7 & \checkmark & 40,830 & 8.0 & \checkmark \\
+2025 & 40,393 & 11.0 & \checkmark & 40,432 & 9.4 & \checkmark & 40,901 & 11.4 & \checkmark & 40,917 & 10.9 & \checkmark \\
+\midrule
+Pass rate & 9/10 &  &  & 8/10 &  &  & 7/10 &  &  & \textbf{10/10} &  &  \\
+\bottomrule
+\end{tabular}

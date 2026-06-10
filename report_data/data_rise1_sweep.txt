@@ -1,0 +1,11 @@
+% Table: rise1 sweep (DCT N=8 on Lighthouse, fixed RMS≈4.935)
+% rise1_frac | optimal_step | rms_actual | entropy_bits | CR
+\begin{tabular}{@{}lcrrc@{}}
+\toprule
+\texttt{rise1} & Zero-bin width & Optimal $\Delta$ & Entropy (bits) & CR \\
+\midrule
+$0.5\Delta$ (uniform) & $1\times\Delta$ & 24.16 & 87,666 & 5.981 \\
+\textbf{$1.0\Delta$ (JPEG)} & $2\times\Delta$ & \textbf{13.18} & \textbf{93,706} & \textbf{5.595} \\
+$1.5\Delta$ & $3\times\Delta$ & 7.59 & 111,218 & 4.714 \\
+\bottomrule
+\end{tabular}

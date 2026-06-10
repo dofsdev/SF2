@@ -1,0 +1,10 @@
+% Table: DCT block size under Huffman coding on Lighthouse
+\begin{tabular}{@{}lrrrrc@{}}
+\toprule
+$N$ & Blocks per image & VLC bits & Total bits & RMS & Pass? \\
+\midrule
+4 & 4,096 & 49,152 & 50,576 & 48.6 & $\times$ \\
+\textbf{8} & 1,024 & \textbf{39,374} & \textbf{40,798} & \textbf{8.6} & \checkmark \\
+16 & 256 & 0 & 0 & 0.0 & $\times$ \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,12 @@
+% Table: Huffman table type comparison at q=7.5
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Custom (opthuff)} & \multicolumn{2}{c}{Fixed embedded} & \multicolumn{2}{c}{JPEG Annex-K default} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Image & VLC bits & +1424 hdr & VLC bits & (no hdr) & VLC bits & (no hdr) \\
+\midrule
+Lighthouse & 16,722 & 18,146 & 17,775 & 17,775 & 20,746 & 20,746 \\
+Bridge & 16,782 & 18,206 & 17,839 & 17,839 & 18,138 & 18,138 \\
+Flamingo & 19,590 & 21,014 & 20,824 & 20,824 & 20,356 & 20,356 \\
+\bottomrule
+\end{tabular}

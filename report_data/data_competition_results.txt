@@ -1,0 +1,12 @@
+% Table: Final scheme (DCT JPEG-luma, custom Huffman) on 3 competition images
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Image & VLC bits & Header & Total bits & RMS \\
+\midrule
+Lighthouse & 33,491 & 1,424 & 34,915 & 11.69 \checkmark \\
+Bridge & 39,079 & 1,424 & 40,503 & 13.79 \checkmark \\
+Flamingo & 38,839 & 1,424 & 40,263 & 13.84 \checkmark \\
+\midrule
+\multicolumn{5}{@{}l}{\small\textit{Final encoder (67-bit header): $\leq$40,960 bits on all 10 historical images.}} \\
+\bottomrule
+\end{tabular}

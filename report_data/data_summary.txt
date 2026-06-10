@@ -1,0 +1,57 @@
+SF2 REPORT DATA SUMMARY
+======================================================================
+
+TABLE 1: rise1 sweep (DCT N=8, Lighthouse, fixed RMS≈4.935)
+rise1/Δ   zero-bin   opt step   entropy bits     CR
+0.5             1Δ      24.16         87,666  5.981   (actual rms=4.935)
+1.0             2Δ      13.18         93,706  5.595   (actual rms=4.935)
+1.5             3Δ       7.59        111,218  4.714   (actual rms=4.935)
+
+
+TABLE 2: Block size under Huffman coding (Lighthouse)
+   N   blocks   vlc_bits    total    rms  pass
+   4    4,096     49,152   50,576   48.6 FAIL
+   8    1,024     39,374   40,798    8.6 PASS
+  16      256          0        0    0.0 FAIL
+
+
+TABLE 3: Huffman table types (q=7.5)
+Image          custom_vlc  fixed_vlc  default_vlc
+Lighthouse         16,722     17,775       20,746
+Bridge             16,782     17,839       18,138
+Flamingo           19,590     20,824       20,356
+
+
+TABLE 4: Full scheme comparison
+Image         LBT LB_bits  LBT LB_rms  ok  DCT DC_bits  DCT DC_rms  ok  DWT DW_bits  DWT DW_rms  ok  DCT S4_bits  DCT S4_rms  ok
+Lighthouse        40,757       9.4  Y      40,798       8.6  Y      40,707      11.2  Y      40,763      10.6  Y
+Bridge            40,725      13.3  Y      40,550      12.9  Y      40,553      16.9  Y      40,828      13.7  Y
+Flamingo          40,650      12.8  Y      40,564      12.2  Y      40,539      15.6  Y      40,558      13.8  Y
+2019              40,909      11.7  Y      41,002      11.4  N      40,768      14.7  Y      40,634      12.4  Y
+2020              40,729      20.9  Y      40,786      20.5  Y      40,498      27.0  Y      40,313      22.1  Y
+2021              41,002       9.3  N      40,734       9.1  Y      41,115      11.4  N      40,660      10.7  Y
+2022              40,620      12.4  Y      40,902      10.3  Y      41,050      12.4  N      40,463      12.7  Y
+2023              40,785      14.3  Y      41,029      13.7  N      41,051      17.7  N      40,883      15.5  Y
+2024              40,500       8.0  Y      40,759       6.8  Y      40,893       8.7  Y      40,830       8.0  Y
+2025              40,393      11.0  Y      40,432       9.4  Y      40,901      11.4  Y      40,917      10.9  Y
+
+
+TABLE 5: Competition results (DCT JPEG-luma)
+Image          VLC bits    hdr    total    rms  pass
+Lighthouse       33,491  1,424   34,915  11.69 PASS
+Bridge           39,079  1,424   40,503  13.79 PASS
+Flamingo         38,839  1,424   40,263  13.84 PASS
+
+
+KEY SINGLE NUMBERS FOR REPORT TEXT
+----------------------------------------
+rise1 entropy saving (uniform→JPEG): -6.9%
+  uniform entropy: 87,666 bits
+  JPEG entropy:    93,706 bits
+LBT $N=4$, $s=\sqrt{2}$        passes 9/10  avg_rms=12.3
+DCT $N=8$ uniform              passes 8/10  avg_rms=11.5
+DWT 4-level                    passes 7/10  avg_rms=14.7
+DCT JPEG-luma                  passes 10/10  avg_rms=13.0
+Lighthouse: total=34,915 bits  rms=11.69  PASS
+Bridge: total=40,503 bits  rms=13.79  PASS
+Flamingo: total=40,263 bits  rms=13.84  PASS
